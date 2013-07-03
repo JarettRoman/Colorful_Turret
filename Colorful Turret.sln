@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colorful Turret", "Colorful Turret\Colorful Turret\Colorful Turret.csproj", "{7F229983-6935-4CF1-B26F-242CACA27985}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Colorful TurretContent", "Colorful Turret\Colorful TurretContent\Colorful TurretContent.contentproj", "{B58D23A2-9F23-47CD-95E1-660246CCBBEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F229983-6935-4CF1-B26F-242CACA27985}.Debug|x86.ActiveCfg = Debug|x86
+		{7F229983-6935-4CF1-B26F-242CACA27985}.Debug|x86.Build.0 = Debug|x86
+		{7F229983-6935-4CF1-B26F-242CACA27985}.Release|x86.ActiveCfg = Release|x86
+		{7F229983-6935-4CF1-B26F-242CACA27985}.Release|x86.Build.0 = Release|x86
+		{B58D23A2-9F23-47CD-95E1-660246CCBBEA}.Debug|x86.ActiveCfg = Debug|x86
+		{B58D23A2-9F23-47CD-95E1-660246CCBBEA}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

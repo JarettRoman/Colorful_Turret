@@ -1,0 +1,7 @@
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\bin\x86\Debug\Content\ship.xnb
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\bin\x86\Debug\Colorful Turret.exe
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\bin\x86\Debug\Colorful Turret.pdb
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\obj\x86\Debug\Colorful Turret.csprojResolveAssemblyReference.cache
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\obj\x86\Debug\Colorful Turret.exe
+C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\obj\x86\Debug\Colorful Turret.pdb
