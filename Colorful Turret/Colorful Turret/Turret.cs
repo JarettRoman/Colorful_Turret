@@ -16,7 +16,7 @@ namespace Colorful_Turret
         Texture2D projectileTexture;
         Vector2 shipOrigin;
         Vector2 shipPosition;
-        Vector2 projectileSpeed;
+        double projectileSpeed;  //change to double
         List<Projectile> projectile = new List<Projectile>();
         
 
@@ -26,7 +26,7 @@ namespace Colorful_Turret
             this.shipTexture = shipTexture;
             this.shipOrigin.X = shipTexture.Width / 2;
             this.shipOrigin.Y = shipTexture.Height / 2;
-            this.projectileSpeed = new Vector2(1.0f);
+            this.projectileSpeed = 10;
             this.projectileTexture = Game1.projectileTexture;
         }
 
@@ -41,14 +41,14 @@ namespace Colorful_Turret
             {
                 Debug.WriteLine("Mouse clicked");
                 projectile.Add(new Projectile(this.projectileTexture, this.shipPosition, this.projectileSpeed, (new Vector2(mouseX, mouseY)), direction));
-                foreach (Projectile i in projectile)
-                {
-                    i.Update();
-                    Debug.WriteLine("Projectile shot");
-                }
+
             }
 
-
+            foreach (Projectile i in projectile)
+            {
+                i.Update();
+                Debug.WriteLine("Projectile shot");
+            }
         }
 
         public float shipAngle () {
