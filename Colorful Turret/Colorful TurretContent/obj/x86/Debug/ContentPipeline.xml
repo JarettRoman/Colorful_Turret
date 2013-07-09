@@ -19,6 +19,15 @@
       <Output>C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\bin\x86\Debug\Content\BOUNCYBALL.xnb</Output>
       <Time>2013-07-08T21:58:24-04:00</Time>
     </Item>
+    <Item>
+      <Source>crosshair.png</Source>
+      <Name>crosshair</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Jarett\Dropbox\Visual Studio 2010\Projects\Colorful Turret\Colorful Turret\Colorful Turret\bin\x86\Debug\Content\crosshair.xnb</Output>
+      <Time>2013-07-09T17:56:49-04:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>

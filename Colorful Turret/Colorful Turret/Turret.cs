@@ -26,7 +26,7 @@ namespace Colorful_Turret
             this.shipTexture = shipTexture;
             this.shipOrigin.X = shipTexture.Width / 2;
             this.shipOrigin.Y = shipTexture.Height / 2;
-            this.projectileSpeed = 50;
+            this.projectileSpeed = 30;
             this.projectileTexture = Game1.projectileTexture;
         }
 
@@ -61,7 +61,7 @@ namespace Colorful_Turret
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(shipTexture, shipPosition, null, Color.White, direction, shipOrigin, 1.0f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(shipTexture, shipPosition, null, Color.White, direction, shipOrigin, 1.0f, SpriteEffects.None, 1.0f);
 
             foreach(Projectile i in projectileList){
                 i.Draw(spriteBatch);

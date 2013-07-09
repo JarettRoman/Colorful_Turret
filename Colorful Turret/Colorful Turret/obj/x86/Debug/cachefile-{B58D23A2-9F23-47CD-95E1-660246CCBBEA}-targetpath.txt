@@ -1,2 +1,3 @@
 Content\ship.xnb
 Content\BOUNCYBALL.xnb
+Content\crosshair.xnb

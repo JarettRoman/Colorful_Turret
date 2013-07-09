@@ -16,8 +16,10 @@ namespace Colorful_Turret
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Texture2D shipTexture;
+        Texture2D cursorTexture;
         Vector2 shipPosition;
         Viewport viewport;
+        Cursor cursor;
 
         static public Texture2D projectileTexture;
 
@@ -30,7 +32,7 @@ namespace Colorful_Turret
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            this.IsMouseVisible = true;
+            //this.IsMouseVisible = true;
         }
 
 
@@ -48,6 +50,7 @@ namespace Colorful_Turret
             spriteBatch = new SpriteBatch(GraphicsDevice);
             shipTexture = Content.Load<Texture2D>("ship");
             projectileTexture = Content.Load<Texture2D>("BOUNCYBALL");
+            cursorTexture = Content.Load<Texture2D>("crosshair");
 
             // Makes sure the ship will always be in the center of the game window.
             viewport = graphics.GraphicsDevice.Viewport;
@@ -56,6 +59,7 @@ namespace Colorful_Turret
             shipPosition.Y = viewport.Height / 2;
 
             turret = new Turret(shipPosition, shipTexture);
+            cursor = new Cursor(cursorTexture);
 
 
 
@@ -69,8 +73,9 @@ namespace Colorful_Turret
         protected override void Update(GameTime gameTime)
         {
             InputHandler.Update();
+            
             turret.Update(GraphicsDevice);
-
+            cursor.Update();
         
             base.Update(gameTime);
         }
@@ -81,7 +86,9 @@ namespace Colorful_Turret
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
+            cursor.Draw(spriteBatch);
             turret.Draw(spriteBatch);
+
 
             spriteBatch.End();
 
