@@ -68,7 +68,8 @@ namespace Colorful_Turret
 
         protected override void Update(GameTime gameTime)
         {
-            turret.Update(Mouse.GetState(), GraphicsDevice);
+            InputHandler.Update();
+            turret.Update(GraphicsDevice);
 
         
             base.Update(gameTime);

@@ -34,7 +34,7 @@ namespace Colorful_Turret
         }
 
 
-        public void Update(GameTime gameTime)
+        public void Update()
         {
             this.currentPosition += (speed)*(this.slope);
         }

@@ -31,18 +31,24 @@ namespace Colorful_Turret
         }
 
         private float direction;
-        public void Update(MouseState mouseState, GraphicsDevice graphicsDevice)
+        public void Update(GraphicsDevice graphicsDevice)
         {
-            mouseState = Mouse.GetState();
-            float mouseX = mouseState.X;
-            float mouseY = mouseState.Y;
+            
+            float mouseX = InputHandler.MouseX();
+            float mouseY = InputHandler.MouseY();
             direction = (float)Math.Atan2(shipPosition.Y - mouseY, shipPosition.X - mouseX);
             if (InputHandler.NewMouseLeftClick())
             {
                 Debug.WriteLine("Mouse clicked");
-
-                projectile.Add(new Projectile(this.projectileTexture, this.shipPosition, this.projectileSpeed, (new Vector2(mouseX, mouseY)), direction)); 
+                projectile.Add(new Projectile(this.projectileTexture, this.shipPosition, this.projectileSpeed, (new Vector2(mouseX, mouseY)), direction));
+                foreach (Projectile i in projectile)
+                {
+                    i.Update();
+                    Debug.WriteLine("Projectile shot");
+                }
             }
+
+
         }
 
         public float shipAngle () {

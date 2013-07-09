@@ -66,9 +66,9 @@ namespace Colorful_Turret
 
 
 
-        public static Point MousePoint()
+        public static Vector2 MouseVector()
         {
-            return new Point(MouseX(), MouseY());
+            return new Vector2 (MouseX(), MouseY());
         }
 
 
