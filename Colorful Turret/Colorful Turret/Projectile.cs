@@ -16,8 +16,7 @@ namespace Colorful_Turret
         Vector2 currentPosition;
         double speed;
         Vector2 target;
-        Vector2 slope;
-        Vector2 rotation;
+        Vector2 projectileOrigin;
         float Angle;
         float direction;
         Texture2D projectileTexture;
@@ -33,6 +32,8 @@ namespace Colorful_Turret
             //this.slope = new Vector2 (this.target.X - this.startPosition.X, this.target.Y - this.startPosition.Y);
             this.direction = direction;
             this.Angle = direction;
+            this.projectileOrigin.X = projectileTexture.Width / 2;
+            this.projectileOrigin.Y = projectileTexture.Height / 2;
             
             this.projectileTexture = projectileTexture;
         }
@@ -41,15 +42,15 @@ namespace Colorful_Turret
         public void Update()
         {
             //this.currentPosition += (speed)*(this.slope);
-            this.currentPosition.X += (float)(Math.Cos(-this.Angle) * -10);
-            this.currentPosition.Y += (float)(Math.Sin(-this.Angle) * 10);
+            this.currentPosition.X += (float)(Math.Cos(-this.Angle) * -this.speed);
+            this.currentPosition.Y += (float)(Math.Sin(-this.Angle) * this.speed);
             this.Lifespan++;
 
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(this.projectileTexture,this.currentPosition,null,Color.White,this.direction,new Vector2(0,0),1.0f,SpriteEffects.None,0f);
+            spriteBatch.Draw(this.projectileTexture,this.currentPosition,null,Color.White,this.direction,this.projectileOrigin,1.0f,SpriteEffects.None,1.0f);
             //spriteBatch.Draw(shipTexture, shipPosition, null, Color.White, direction, shipOrigin, 1.0f, SpriteEffects.None, 0f);
         }
     }

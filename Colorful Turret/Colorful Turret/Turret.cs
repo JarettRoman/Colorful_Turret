@@ -26,7 +26,7 @@ namespace Colorful_Turret
             this.shipTexture = shipTexture;
             this.shipOrigin.X = shipTexture.Width / 2;
             this.shipOrigin.Y = shipTexture.Height / 2;
-            this.projectileSpeed = 10;
+            this.projectileSpeed = 50;
             this.projectileTexture = Game1.projectileTexture;
         }
 
@@ -44,13 +44,13 @@ namespace Colorful_Turret
 
             }
 
-        for(int i=projectileList.Count - 1; i>0; i--)
+        for(int i=projectileList.Count - 1; i>-1; i--)
         {
          Projectile NextProjectile = projectileList[i];
 
          NextProjectile.Update();
 
-            if(NextProjectile.Lifespan > 5)
+            if(NextProjectile.Lifespan > 500)
                 projectileList.RemoveAt(i);
         }
         }
