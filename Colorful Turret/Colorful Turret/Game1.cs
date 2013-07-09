@@ -19,6 +19,8 @@ namespace Colorful_Turret
         Vector2 shipPosition;
         Viewport viewport;
 
+        static public Texture2D projectileTexture;
+
         Turret turret;
 
 
@@ -45,6 +47,7 @@ namespace Colorful_Turret
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             shipTexture = Content.Load<Texture2D>("ship");
+            projectileTexture = Content.Load<Texture2D>("BOUNCYBALL");
 
             // Makes sure the ship will always be in the center of the game window.
             viewport = graphics.GraphicsDevice.Viewport;
@@ -65,7 +68,7 @@ namespace Colorful_Turret
 
         protected override void Update(GameTime gameTime)
         {
-            turret.Update(Mouse.GetState());
+            turret.Update(Mouse.GetState(), GraphicsDevice);
 
         
             base.Update(gameTime);
