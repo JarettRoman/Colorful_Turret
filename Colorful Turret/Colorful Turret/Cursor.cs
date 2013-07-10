@@ -34,7 +34,7 @@ namespace Colorful_Turret
         {
             spriteBatch.Draw(this.cursorTexture, 
                 new Rectangle((int)InputHandler.MouseX() - (this.textureOriginX), (int)InputHandler.MouseY() - (this.textureOriginY), 
-                    cursorTexture.Width, cursorTexture.Height), Color.White);
+                    cursorTexture.Width, cursorTexture.Height), null, Color.White, 0f, new Vector2(0,0), SpriteEffects.None, 0f);
         }
     }
 }

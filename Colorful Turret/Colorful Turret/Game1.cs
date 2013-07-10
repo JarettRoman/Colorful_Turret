@@ -15,6 +15,7 @@ namespace Colorful_Turret
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        SpriteSortMode spriteSortMode;
         Texture2D shipTexture;
         Texture2D cursorTexture;
         Vector2 shipPosition;
@@ -48,6 +49,7 @@ namespace Colorful_Turret
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteSortMode = new SpriteSortMode();
             shipTexture = Content.Load<Texture2D>("ship");
             projectileTexture = Content.Load<Texture2D>("BOUNCYBALL");
             cursorTexture = Content.Load<Texture2D>("crosshair");
@@ -85,10 +87,11 @@ namespace Colorful_Turret
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
+            //SpriteSortMode.FrontToBack();
 
-            cursor.Draw(spriteBatch);
+            
             turret.Draw(spriteBatch);
-
+            cursor.Draw(spriteBatch);
 
             spriteBatch.End();
 
